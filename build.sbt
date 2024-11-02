@@ -1,5 +1,5 @@
 ThisBuild / version := "0.1.0-SNAPSHOT"
-ThisBuild / scalaVersion := "2.12.20"
+ThisBuild / scalaVersion := "2.12.18"
 val meta = """META.INF(.)*"""
 ThisBuild / assemblyMergeStrategy := {
   case PathList("META-INF", xs @_*) =>
@@ -16,8 +16,8 @@ ThisBuild / assemblyMergeStrategy := {
 lazy val root = (project in file("."))
   .settings(
     name := "hw2",
-    assembly / mainClass := Some("Entry"),
-    assembly / assemblyJarName := "mapreduce.jar",
+    assembly / mainClass := Some("Main"),
+    assembly / assemblyJarName := "cs441hw2.jar",
     libraryDependencies += "org.apache.hadoop" % "hadoop-common" % "3.4.0",
     libraryDependencies += "org.apache.hadoop" % "hadoop-mapreduce-client-core" % "3.4.0" ,
     libraryDependencies += "org.apache.hadoop" % "hadoop-mapreduce-client-jobclient" % "3.4.0",
