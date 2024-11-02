@@ -44,7 +44,7 @@ spark-submit  --master local cs441hw2.jar data /smallData.txt /bin
 ````
 spark-submit  --master local cs441hw2.jar model /bin /model.zip /stats.txt
 ````
-9. In your hdfs, you have produced "model.zip" which is the model. You can also access the statistics throught "stats.txt"
+9. In your hdfs, you have produced "model.zip" which is the model.  **You can also access the training statistics at "stats.txt"**
 10. We can test the model using the following command:
 ````
 bin/spark-submit  --master local cs441hw2.jar generate /model.zip  "hello i am testing" /output.txt
