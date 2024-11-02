@@ -44,7 +44,7 @@ object getModel {
   val modelConfig = myConf.getConfig("myModelConfig")
 
   def getModel(inputPath: String, outputPath: String, statPath:String) {
-    val conf = new SparkConf().setMaster("local").setAppName("model")
+    val conf = new SparkConf().setAppName("model")
     val sc = new SparkContext(conf)
 
 

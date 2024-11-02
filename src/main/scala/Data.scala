@@ -22,7 +22,7 @@ object Data {
 
      val dataConf = myConf.getConfig("myDataConfig")
      logger.info("compute sliding window dataset")
-     val conf = new SparkConf().setMaster("local").setAppName("data")
+     val conf = new SparkConf().setAppName("data")
      val sc = new SparkContext(conf)
      val text = sc.textFile(dataConf.getString("fileSystem") + input)
 
