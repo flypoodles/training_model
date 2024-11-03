@@ -22,6 +22,8 @@ https://stackoverflow.com/questions/28675460/how-to-keep-the-spark-web-ui-alive
 ``mkdir /tmp/spark-events``
 ## Instruction
 
+## Video
+https://youtu.be/2n5L30e5sGg
 ---
 
 1. clone the repository into Intelliji IDE
@@ -32,12 +34,12 @@ https://stackoverflow.com/questions/28675460/how-to-keep-the-spark-web-ui-alive
 6. Upload "data.txt" and "tokenList.txt" to your hdfs system
 
 ````
-hadoop fs -put smallData.txt /smallData.txt
+hadoop fs -put data.txt /data.txt
 hadoop fs -put tokenList.txt /tokenList.txt
 ````
 7. run the following command to compute the dataset to train the model
 ````
-spark-submit  --master local cs441hw2.jar data /smallData.txt /bin
+spark-submit  --master local cs441hw2.jar data /data.txt /bin
 ````
 
 8. run the following command to train the model
